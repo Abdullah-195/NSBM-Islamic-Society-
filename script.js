@@ -120,22 +120,5 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(counter);
     });
 
-    // Funds Toggle Logic
-    const fundsToggles = document.querySelectorAll('.funds-toggle-btn');
-    fundsToggles.forEach(btn => {
-        btn.addEventListener('click', function () {
-            const dropdown = this.nextElementSibling;
-            const icon = this.querySelector('.switch-icon');
 
-            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                dropdown.style.display = 'block';
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-            } else {
-                dropdown.style.display = 'none';
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            }
-        });
-    });
 });

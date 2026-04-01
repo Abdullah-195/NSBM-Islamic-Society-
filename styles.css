@@ -1,27 +1,30 @@
 /* Base Variables - NSBM IS Branding */
 :root {
-    --brand-blue: #165ba7;        /* Blue from Mosque & Text */
+    --brand-blue: #165ba7;
+    /* Blue from Mosque & Text */
     --brand-blue-dark: #10437e;
     --brand-blue-light: #2b78ce;
     --brand-blue-glow: rgba(22, 91, 167, 0.2);
-    
-    --brand-green: #7cc242;       /* Green from Leaf */
+
+    --brand-green: #7cc242;
+    /* Green from Leaf */
     --brand-green-dark: #63a032;
     --brand-green-glow: rgba(124, 194, 66, 0.2);
 
     --bg-main: #ffffff;
-    --bg-alt: #f4f8fb;            /* Slight blue tint for alt bg */
-    --text-main: #111827;         
+    --bg-alt: #f4f8fb;
+    /* Slight blue tint for alt bg */
+    --text-main: #111827;
     --text-muted: #4b5563;
     --border-color: #e5e7eb;
-    
+
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
+
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -45,11 +48,17 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.2;
-    color: var(--brand-blue-dark); /* Using dark blue for headings */
+    color: var(--brand-blue-dark);
+    /* Using dark blue for headings */
 }
 
 a {
@@ -111,7 +120,8 @@ ul {
     height: 80px;
     width: auto;
     margin-bottom: 1rem;
-    background-color: white; /* Contrast against dark footer if logo is transparent and dark */
+    background-color: white;
+    /* Contrast against dark footer if logo is transparent and dark */
     padding: 0.5rem;
     border-radius: 8px;
 }
@@ -227,7 +237,8 @@ ul {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--brand-green); /* nice green underline */
+    background-color: var(--brand-green);
+    /* nice green underline */
     transition: var(--transition);
 }
 
@@ -291,8 +302,13 @@ ul {
 }
 
 @keyframes drift {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 .hero-content {
@@ -372,7 +388,8 @@ ul {
 }
 
 .feature-list i {
-    color: var(--brand-green); /* Using green for checkmarks */
+    color: var(--brand-green);
+    /* Using green for checkmarks */
     font-size: 1.25rem;
 }
 
@@ -572,7 +589,8 @@ ul {
 
 .event-category.recurring {
     background: #fff7ed;
-    color: #ea580c; /* keeping orange for recurring for variety */
+    color: #ea580c;
+    /* keeping orange for recurring for variety */
 }
 
 .event-details h3 {
@@ -651,7 +669,8 @@ ul {
 
 /* Footer Section */
 .footer {
-    background-color: var(--brand-blue-dark); /* Using dark blue for footer */
+    background-color: var(--brand-blue-dark);
+    /* Using dark blue for footer */
     color: #f3f4f6;
     padding: 5rem 0 2rem;
 }
@@ -691,7 +710,8 @@ ul {
     transform: translateY(-3px);
 }
 
-.footer-contact h3, .footer-signup h3 {
+.footer-contact h3,
+.footer-signup h3 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     color: white;
@@ -725,8 +745,8 @@ ul {
 .signup-form input {
     padding: 0.875rem 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
     color: white;
     font-family: var(--font-body);
     outline: none;
@@ -740,9 +760,67 @@ ul {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #9ca3af;
     font-size: 0.875rem;
+}
+
+/* Committee */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.profile-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+    border-color: var(--brand-blue-glow);
+}
+
+.profile-img-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--brand-blue-glow);
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    color: var(--brand-blue);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-card h3 {
+    font-size: 1.25rem;
+    color: var(--brand-blue-dark);
+    margin-bottom: 0.25rem;
+}
+
+.profile-card .role {
+    font-size: 0.95rem;
+    color: var(--brand-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.profile-card .member-desc {
+    font-size: 0.875rem;
+    color: var(--text-muted);
 }
 
 /* Animations */
@@ -794,16 +872,18 @@ ul {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .about-grid, .footer-grid {
+
+    .about-grid,
+    .footer-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .floating-card {
         bottom: 20px;
         left: 20px;
     }
-    
+
     .hero-title {
         font-size: 3rem;
     }
@@ -813,19 +893,19 @@ ul {
     .nav-links {
         display: none;
     }
-    
+
     .nav-cta {
         display: none;
     }
-    
+
     .menu-toggle {
         display: block;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .section-padding {
         padding: 4rem 0;
     }
