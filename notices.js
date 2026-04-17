@@ -9,15 +9,15 @@ const noticesData = [
     {
         // 1. Event Date Box (Left side)
         date: {
-            day: "03",
-            month: "APR",
+            day: "Day",
+            month: "Month",
             bgColor: "var(--brand-green)", // Use standard css colors or var(--brand-green), var(--brand-blue)
             textColor: "white"
         },
 
         // 2. Small Category Badge (Above Title)
         category: {
-            label: "Tomorrow",
+            label: "This Week",
             bgColor: "var(--brand-green-glow)",
             textColor: "var(--brand-green-dark)"
         },
@@ -28,10 +28,10 @@ const noticesData = [
         // 4. List of detail rows (Icon + Text)
         // You can find icons at https://fontawesome.com/icons (use the class names like "fa-regular fa-clock")
         details: [
-            { icon: "fa-regular fa-calendar", text: "14.10.1447 / 03.04.2026" },
+            { icon: "fa-regular fa-calendar", text: "date" },
             { icon: "fa-regular fa-clock", text: "12:30 PM" },
             { icon: "fa-solid fa-location-dot", text: "Prayer Room" },
-            { icon: "fa-solid fa-microphone", text: "<strong>Khateeb:</strong> Mafaz" }
+            { icon: "fa-solid fa-microphone", text: "<strong>Khateeb:</strong>" }
         ],
 
         // 5. Standard Description (Optional, leave as "" if not needed)
